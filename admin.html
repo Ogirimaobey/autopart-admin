@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | AutoPart Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Outfit', sans-serif; }</style>
+</head>
+<body class="bg-[#f8fafc] flex min-h-screen">
+
+    <aside class="w-64 bg-slate-900 text-slate-400 p-6 hidden lg:flex flex-col">
+        <div class="text-white font-black text-2xl mb-12 italic">ADMIN.</div>
+        <nav class="flex flex-col gap-4 flex-grow">
+            <a href="#" class="bg-blue-600 text-white p-3 rounded-xl font-bold flex items-center gap-3">
+                <span>🏠</span> Dashboard
+            </a>
+            <a href="#" class="p-3 hover:bg-slate-800 rounded-xl transition flex items-center gap-3">
+                <span>📦</span> My Products
+            </a>
+            <a href="#" class="p-3 hover:bg-slate-800 rounded-xl transition flex items-center gap-3">
+                <span>📊</span> Sales Report
+            </a>
+        </nav>
+        <div class="p-4 bg-slate-800 rounded-2xl text-xs text-center">
+            Logged in as: <br><strong class="text-white">Ogirima Motors Ltd</strong>
+        </div>
+    </aside>
+
+    <main class="flex-grow">
+        <header class="bg-white p-6 border-b border-gray-100 flex justify-between items-center sticky top-0 z-10">
+            <h2 class="text-xl font-bold text-slate-800">Business Overview</h2>
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold shadow-lg shadow-blue-200">+ Add New Part</button>
+        </header>
+
+        <div class="p-4 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
+                    <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-2">Total Sales (Monthly)</p>
+                    <h3 class="text-3xl font-black text-slate-900">₦2,450,000</h3>
+                    <p class="text-green-500 text-sm mt-2 font-bold">↑ 12% increase</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
+                    <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-2">Active Listings</p>
+                    <h3 class="text-3xl font-black text-slate-900">142 Parts</h3>
+                    <p class="text-slate-400 text-sm mt-2">Across 5 Categories</p>
+                </div>
+                <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
+                    <p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-2">Store Rating</p>
+                    <h3 class="text-3xl font-black text-slate-900">4.9 / 5.0</h3>
+                    <p class="text-yellow-500 text-sm mt-2">★★★★★</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+                <h3 class="text-xl font-extrabold text-slate-900 mb-6">Quick Upload New Product</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-bold text-slate-500 uppercase">Part Name</label>
+                        <input type="text" placeholder="e.g. Brake Pads" class="p-3 bg-gray-50 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-bold text-slate-500 uppercase">Car Model</label>
+                        <input type="text" placeholder="Lexus ES350 (2010)" class="p-3 bg-gray-50 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-xs font-bold text-slate-500 uppercase">Price (₦)</label>
+                        <input type="number" placeholder="45000" class="p-3 bg-gray-50 border rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div class="flex flex-col gap-2 justify-end">
+                        <button class="bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-blue-600 transition">Save to Catalog</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 overflow-x-auto">
+                <table class="w-full text-left border-collapse bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <thead>
+                        <tr class="bg-slate-50 text-slate-500 uppercase text-[10px] font-black">
+                            <th class="p-5">Product Details</th>
+                            <th class="p-5">Category</th>
+                            <th class="p-5">Price</th>
+                            <th class="p-5">Stock Status</th>
+                            <th class="p-5">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-50">
+                        <tr>
+                            <td class="p-5 font-bold text-slate-800">Honda Accord Gearbox (Used)</td>
+                            <td class="p-5 text-slate-600">Transmission</td>
+                            <td class="p-5 font-bold">₦450,000</td>
+                            <td class="p-5"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[10px] font-bold">AVAILABLE</span></td>
+                            <td class="p-5 text-blue-600 font-bold hover:underline cursor-pointer">Edit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
